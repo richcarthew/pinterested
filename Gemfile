@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
-gem 'sqlite3'
+#gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -40,3 +40,12 @@ group :development do
   gem 'spring'
 end
 
+group :development, :test do
+  gem 'sqlite3'
+end
+
+group :development do
+  # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'pg', '0.17.1'
+  gem 'rails_12factor', '0.0.2'
+end
